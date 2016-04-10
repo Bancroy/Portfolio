@@ -1,0 +1,18 @@
+#footer {
+    background-color: $black;
+
+    p {
+        @include flow-text(12, 21, "px");
+        color: $white;
+        font-weight: 300;
+        margin: 15px 0;
+
+        &.pull-right {
+            margin-left: auto;
+        }
+    }
+
+    .container {
+        display: flex;
+    }
+}
