@@ -10,8 +10,17 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header>
+            <h2 class="outline-only">Header</h2></header>
+            <nav>
+                <h3 class="outline-only">Navigation</h3>
+            </nav>
+        <main>
+            <h2 class="outline-only">Content</h2>
+            <?php require_once("/content/home.php"); ?>
+        </main>
+        <footer>
+            <h2 class="outline-only">Footer</h2>
+        </footer>
     </body>
 </html>
