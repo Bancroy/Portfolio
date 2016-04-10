@@ -6,5 +6,6 @@
             Web Developer
         </h1>
         <div class="separator"><span></span></div>
+        <a class="font-lato" href="https://github.com/Bancroy" target="_blank">View on github</a>
     </div>
 </section>
