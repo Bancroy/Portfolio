@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "description": "Website created to represent personal skills.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bancroy/portfolio.git"
+  },
+  "author": "James Pietras <bancroy@gmail.com>",
+  "private": true,
+  "license": "UNLICENSED"
+}
