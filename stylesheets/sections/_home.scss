@@ -1,0 +1,24 @@
+#home {
+    background: url("/images/backgrounds/home.png") no-repeat center center;
+    background-size: cover;
+    height: 600px;
+
+    h1 {
+        @include flow-text(32, 60, "px");
+        color: $white;
+        font-weight: 400;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    small {
+        @include flow-text(16, 24, "px");
+        display: block;
+    }
+}

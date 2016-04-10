@@ -1,3 +1,7 @@
+// Colors
+$black: #000;
+$white: #fff;
+
 // Responsiveness
 $breakpoints: (
     "xs": 0,
@@ -6,5 +10,11 @@ $breakpoints: (
     "lg": 992,
     "xl": 1200
 );
-
 @include flexbox-grid();
+
+// Elements style
+$cuts-color: $white;
+$dim-percentage: .55;
+
+// General settings
+$font-fallback: "Arial, sans-serif";

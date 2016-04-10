@@ -17,7 +17,7 @@ gulp.task("clean", function () {
 });
 
 gulp.task("copy", ["clean"], function () {
-    return gulp.src(["index.php", "fonts/**/*"])
+    return gulp.src(["index.php", "content/**/*", "fonts/**/*", "images/**/*"])
         .pipe(gulpif(util.env.developement, copy("build")))
         .pipe(gulpif(util.env.production, copy("dist")));
 });
@@ -41,5 +41,5 @@ gulp.task("stylesheets", ["clean"], function () {
 gulp.task("build", ["clean", "copy", "stylesheets", "stylesheets-lint"]);
 
 gulp.task("watch", function () {
-    gulp.watch(["index.php", "fonts/**/*", "stylesheets/**/*"], ["build"]);
+    gulp.watch(["index.php", "content/**/*", "fonts/**/*", "images/**/*", "stylesheets/**/*"], ["build"]);
 });
