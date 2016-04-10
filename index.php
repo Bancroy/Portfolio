@@ -19,8 +19,6 @@
             <h2 class="outline-only">Content</h2>
             <?php require_once("/content/home.php"); ?>
         </main>
-        <footer>
-            <h2 class="outline-only">Footer</h2>
-        </footer>
+        <?php require_once("/content/footer.php"); ?>
     </body>
 </html>
