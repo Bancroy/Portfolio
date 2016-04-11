@@ -20,7 +20,7 @@ html {
     min-width: 320px;
 }
 
-body > main > section {
+.content-section {
     position: relative;
 
     &.cuts-bottom::after,

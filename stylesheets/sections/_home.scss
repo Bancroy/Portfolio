@@ -7,7 +7,7 @@
         @include link-ghost-button($white, $black);
     }
 
-    h1 {
+    h3 {
         @include flow-text(32, 60, "px");
         color: $white;
         font-weight: 400;

@@ -10,15 +10,22 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <h1 class="outline-only">Portfolio | James Pietras - Front-End Web Developer</h1>
         <header>
-            <h2 class="outline-only">Header</h2></header>
-            <nav>
-                <h3 class="outline-only">Navigation</h3>
-            </nav>
+            <section>
+                <h2 class="outline-only">Header</h2>
+                <nav>
+                    <h3 class="outline-only">Navigation</h3>
+                </nav>
+            </section>
+        </header>
         <main>
-            <h2 class="outline-only">Content</h2>
-            <?php require_once("/content/home.php"); ?>
-            <?php require_once("/content/about.php"); ?>
+            <section>
+                <h2 class="outline-only">Content</h2>
+                <?php require_once("/content/home.php"); ?>
+                <?php require_once("/content/about.php"); ?>
+                <?php require_once("/content/skills.php"); ?>
+            </section>
         </main>
         <?php require_once("/content/footer.php"); ?>
     </body>
