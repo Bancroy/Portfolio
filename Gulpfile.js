@@ -11,7 +11,7 @@ var sourcemaps   = require("gulp-sourcemaps");
 var util         = require("gulp-util");
 
 gulp.task("clean", function () {
-    if(util.env.developement)
+    if(util.env.development)
         return gulp.src("build", { read: false })
                    .pipe(clean());
     if(util.env.production)
@@ -21,7 +21,7 @@ gulp.task("clean", function () {
 
 gulp.task("copy", ["clean"], function () {
     return gulp.src(["index.php", "content/**/*", "fonts/**/*", "images/**/*"])
-               .pipe(gulpif(util.env.developement, copy("build")))
+               .pipe(gulpif(util.env.development, copy("build")))
                .pipe(gulpif(util.env.production, copy("dist")));
 });
 
@@ -38,12 +38,12 @@ gulp.task("stylesheets-lint", ["clean"], function () {
 
 gulp.task("stylesheets", ["clean"], function () {
     return gulp.src("stylesheets/style.scss")
-               .pipe(gulpif(util.env.developement, sourcemaps.init()))
+               .pipe(gulpif(util.env.development, sourcemaps.init()))
                 .pipe(sass().on("error", sass.logError))
                 .pipe(autoprefixer({ browsers: "> 0.1%", cascade: false }))
                 .pipe(gulpif(util.env.production, cssnano()))
-               .pipe(gulpif(util.env.developement, sourcemaps.write()))
-               .pipe(gulpif(util.env.developement, gulp.dest("build")))
+               .pipe(gulpif(util.env.development, sourcemaps.write()))
+               .pipe(gulpif(util.env.development, gulp.dest("build")))
                .pipe(gulpif(util.env.production, gulp.dest("dist")));
 });
 
