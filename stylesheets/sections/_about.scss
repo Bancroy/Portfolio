@@ -1,10 +1,20 @@
 #about {
-    padding: 80px 0 50px;
+    padding: 60px 0;
 
     article {
         margin-bottom: 50px;
         padding: 0 20px;
         position: relative;
+
+        @include breakpoint("md", "and-up") {
+            &:nth-last-of-type(-n + 2) {
+                margin-bottom: 0;
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
 
         &::after {
             background-color: $primary;
@@ -76,7 +86,7 @@
         img {
             display: block;
             margin: 0 auto 30px;
-            max-width: 300px;
+            max-width: 250px;
             width: 100%;
         }
     }
