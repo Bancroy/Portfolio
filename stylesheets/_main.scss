@@ -52,6 +52,11 @@ html {
             position: relative;
             top: -5px;
             width: 8px;
+
+            @include breakpoint("sm", "and-down") {
+                top: -3px;
+                width: 6px;
+            }
         }
     }
 
