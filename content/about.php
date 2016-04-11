@@ -4,7 +4,7 @@
         <div class="row">
             <div class="column xs-14 offset-xs-1 offset-sm-1 offset-md-1 lg-5 person">
                 <img src="/images/other/about-photo.png" alt="James Pietras">
-                <a class="font-lato" href="#">Resume</a>
+                <a class="font-lato" href="/images/other/about-resume.png" target="_blank" type="image/png">Resume</a>
             </div>
             <div class="column xs-14 offset-xs-1 offset-sm-1 offset-md-1 lg-10 offset-lg-1 offset-xl-1 row font-lato entries">
                 <article class="column xs-16 md-8">
