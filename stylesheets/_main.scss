@@ -23,6 +23,38 @@ html {
 .content-section {
     position: relative;
 
+    > header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        h3 {
+            @include flow-text(32, 60, "px");
+            color: $white;
+            font-weight: 400;
+            margin: 0;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        small {
+            @include flow-text(16, 24, "px");
+            display: block;
+        }
+
+        &::before {
+            background-color: $primary;
+            content: "";
+            height: auto;
+            margin-right: 12px;
+            position: relative;
+            top: -5px;
+            width: 8px;
+        }
+    }
+
     &.cuts-bottom::after,
     &.cuts-top::before {
         background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50' preserveAspectRatio='none'><path fill='" + $cuts-color + "' d='M 0,0 100,0 100,50 L 40,0 0,50 Z' /></svg>");
