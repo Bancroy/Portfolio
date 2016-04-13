@@ -28,5 +28,6 @@
             </section>
         </main>
         <?php require_once("/content/footer.php"); ?>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
