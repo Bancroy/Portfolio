@@ -1,3 +1,20 @@
+function whichTransitionEvent() {
+    var t;
+    var el = document.createElement("fakeelement");
+    var transitions = {
+      transition: "transitionend",
+      OTransition: "oTransitionEnd",
+      MozTransition: "transitionend",
+      WebkitTransition: "webkitTransitionEnd"
+    }
+
+    for(t in transitions){
+        if(el.style[t] !== undefined) {
+            return transitions[t];
+        }
+    }
+}
+
 $(document).ready(function () {
     // Progressive enhancement
     $("#skills .list-block").removeAttr("hidden");
@@ -5,7 +22,7 @@ $(document).ready(function () {
     $("#skills .results li").hide().css("opacity", "0");
 
     // List click shows connected element in result box
-    $("#skills .list-block li").on("click", function showResult() {
+    $("#skills .list li").on("click", function showResult() {
         // Cancel if already active
         if($(this).hasClass("active"))
             return true;
@@ -20,16 +37,16 @@ $(document).ready(function () {
         var index = $(this).index();
 
         // Hide all results
-        $("#skills .results li").css("opacity", "0").on("transitionend webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd", function hidden(event) {
+        $("#skills .results li.active").css("opacity", "0").on(whichTransitionEvent(), function hidden(event) {
             $(this).off(event);
-            $(this).hide();
+            $(this).hide().removeClass("active");
 
             // Show associated element
-            $("#skills .results").children().eq(index).show().css("opacity", "1");
+            $("#skills .results").children().eq(index).show().css("opacity", "1").addClass("active");
         });
     });
 
     // Activate the first element
     $("#skills .list-block li").eq(0).addClass("active");
-    $("#skills .results li").eq(0).show().css("opacity", "1");
+    $("#skills .results li").eq(0).show().css("opacity", "1").addClass("active");
 });

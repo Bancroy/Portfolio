@@ -50,9 +50,11 @@
                 content: "";
                 display: block;
                 height: 12px;
+                left: 0;
                 margin-left: auto;
+                position: relative;
                 transform: rotateZ(45deg);
-                transition: border-color $hover-transition-time;
+                transition: border-color $hover-transition-time, left $hover-transition-time, transform $hover-transition-time;
                 width: 12px;
             }
 
@@ -72,6 +74,14 @@
 
             &.active {
                 padding-left: 48px;
+
+                &::after {
+                    border-right: 2px solid $primary;
+                    border-top: 2px solid $primary;
+                    left: 7px;
+                    position: relative;
+                    transform: rotateZ(225deg);
+                }
 
                 &::before {
                     opacity: 1;
