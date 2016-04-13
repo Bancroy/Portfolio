@@ -149,8 +149,7 @@
                         </header>
                         <p class="description">
                             Bootstrap is multifunctional front-end framework allowing developer to save time in pretty much every area.
-                            I am able to use it properly, building standarized websites with Bootstrap's grid.
-                            If neccessary I can also personalize each component it for you.
+                            I am using it very often, also personalizing it's components for my needs.
                         </p>
                         <footer>
                             <p class="familiarity">Familiarity:</p>
@@ -172,7 +171,7 @@
                         <p class="description">
                             Gulp allows me to automate most of annoying, repetetive front-end tasks.
                             I am able to write functional Gulpfile.js that will take care of as much as possible.
-                            It's great to use Gulp whenever possible because sacing time means saving money.
+                            It's great to use Gulp because saving time means saving money.
                         </p>
                         <footer>
                             <p class="familiarity">Familiarity:</p>
@@ -193,8 +192,7 @@
                         </header>
                         <p class="description">
                             Writing semantic code is extremly important as it increases maintainability and SEO rating.
-                            Search engine (for example Google) crawlers need clear code which properly explains content.
-                            I am trying my very best to keep websites' outline meaningful.
+                            I am trying my very best to keep websites' outline meaningful and inviting (for search crawlers).
                         </p>
                         <footer>
                             <p class="familiarity">Familiarity:</p>
@@ -216,7 +214,6 @@
                         <p class="description">
                             Flexibility is important, so every now and then I am working on graphical design for websites.
                             I am not very adept at this matters, but I am able to design what I need, cut layouts and prepare images.
-                            You won't need to hire another person for few simple tasks.
                         </p>
                         <footer>
                             <p class="familiarity">Familiarity:</p>
