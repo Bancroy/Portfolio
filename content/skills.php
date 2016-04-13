@@ -8,8 +8,20 @@
         </h3>
     </header>
     <div class="container">
-        <section class="row">
-            <h3 class="outline-only">Technologies</h3>
+        <section class="row technologies">
+            <div class="column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-1 lg-5 offset-lg-2 xl-4 offset-xl-3 font-lato list-block" hidden>
+                <h3>Technologies:</h3>
+                <ul class="list">
+                    <li class='active'>
+                        <img src="/images/icons/skills-sass.png" alt="">
+                        <p>SASS</p>
+                    </li>
+                    <li>
+                        <img src="/images/icons/skills-git.png" alt="">
+                        <p>Git</p>
+                    </li>
+                </ul>
+            </div>
             <ul class="column xs-10 offset-xs-3 sm-8 offset-sm-4 md-6 offset-md-5 lg-4 offset-lg-6 offset-xl-6 font-lato results">
                 <li>
                     <article>

@@ -3,14 +3,100 @@
     background-size: cover;
     padding: #{$section-padding};
 
+    .list-block,
     .results {
         background-color: $white;
         border-radius: 5px;
+        padding: 0;
+    }
+
+    .list {
+        height: 264px;
+        list-style: none;
+        margin: 0;
+        overflow-y: scroll;
+        padding: 0;
+
+        img {
+            height: 32px;
+            width: 32px;
+        }
+
+        li {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            padding: 10px 20px;
+            position: relative;
+            transition: background-color $hover-transition-time, color $hover-transition-time, padding $hover-transition-time;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #eee;
+            }
+
+            &:not(.active):hover {
+                background-color: $primary;
+                color: $white;
+
+                &::after {
+                    border-right: 2px solid $white;
+                    border-top: 2px solid $white;
+                }
+            }
+
+            &::after {
+                border-right: 2px solid #444;
+                border-top: 2px solid #444;
+                content: "";
+                display: block;
+                height: 12px;
+                margin-left: auto;
+                transform: rotateZ(45deg);
+                transition: border-color $hover-transition-time;
+                width: 12px;
+            }
+
+            &::before {
+                background-color: $primary;
+                border-radius: 5px;
+                content: "";
+                height: 12px;
+                left: 20px;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: opacity $hover-transition-time;
+                width: 12px;
+            }
+
+            &.active {
+                cursor: not-allowed;
+                padding-left: 48px;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        p {
+            font-size: 16px;
+            margin: 0 0 0 10px;
+        }
+    }
+
+    .results {
         display: flex;
         list-style: none;
-        margin-top: 40px;
+        margin-bottom: 0;
+        margin-top: 0;
         overflow-x: scroll;
         padding: 0;
+
+        @include breakpoint("sm", "and-down") {
+            margin-top: 30px;
+        }
 
         article {
             display: flex;
@@ -132,5 +218,28 @@
             display: inline-block;
             height: 8px;
         }
+    }
+
+    .technologies {
+        margin-top: 40px;
+
+        h3 {
+            font-size: 21px;
+            font-weight: 400;
+            margin: 0;
+            padding: 10px 0;
+            position: relative;
+            text-align: center;
+
+            &::after {
+                background-color: #d6d6d6;
+                content: "";
+                height: 1px;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+            }
+    }
     }
 }
