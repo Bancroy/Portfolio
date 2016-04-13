@@ -16,6 +16,11 @@
     }
 }
 
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
 html {
     min-width: 320px;
 }

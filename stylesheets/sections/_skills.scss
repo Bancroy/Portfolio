@@ -1,6 +1,136 @@
 #skills {
     background: url("/images/backgrounds/skills.png") no-repeat center center;
     background-size: cover;
-    height: 700px;
     padding: #{$section-padding};
+
+    .results {
+        background-color: $white;
+        border-radius: 5px;
+        display: flex;
+        list-style: none;
+        margin-top: 40px;
+        overflow-x: scroll;
+        padding: 0;
+
+        article {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            align-items: center;
+            background-color: #d6d6d6;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+
+            @include breakpoint("xs", "only") {
+                flex-wrap: wrap;
+            }
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 400;
+            margin: 0 0 4px;
+        }
+
+        header {
+            border-radius: 5px 5px 0 0;
+            color: $black;
+            display: flex;
+            justify-content: center;
+            margin: 0 15px;
+            padding: 15px 0;
+            position: relative;
+
+            @include breakpoint("xs", "only") {
+                margin: 0;
+            }
+
+            &::after {
+                background-color: #d6d6d6;
+                content: "";
+                height: 1px;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+            }
+        }
+
+        img {
+            height: 64px;
+            margin-right: 10px;
+            position: relative;
+            width: 64px;
+
+            @include breakpoint("xs", "only") {
+                margin-left: 10px;
+            }
+        }
+
+        li {
+            display: flex;
+            flex-basis: 100%;
+            flex-shrink: 0;
+        }
+
+        .description {
+            flex-grow: 1;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .explanation {
+            margin: 0;
+            text-align: center;
+        }
+
+        .familiarity {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 5px 10px 5px 0;
+            text-transform: uppercase;
+
+            @include breakpoint("xs", "only") {
+                flex-basis: 100%;
+                margin-right: 0;
+                text-align: center;
+            }
+        }
+
+        .skillbar {
+            flex-grow: 1;
+            max-width: 200px;
+
+            @include breakpoint("xs", "only") {
+                flex-basis: 90%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .wrapper {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    }
+
+    .skillbar {
+        background-color: #fff;
+        border-radius: 4px;
+        font-size: 0;
+        height: 8px;
+
+        span {
+            background-color: $primary;
+            border-radius: 4px;
+            display: inline-block;
+            height: 8px;
+        }
+    }
 }
