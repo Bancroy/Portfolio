@@ -12,7 +12,7 @@
             <div class="column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-1 lg-5 offset-lg-2 xl-4 offset-xl-3 font-lato list-block" hidden>
                 <h3>Technologies:</h3>
                 <ul class="list">
-                    <li class='active'>
+                    <li>
                         <img src="/images/icons/skills-sass.png" alt="">
                         <p>SASS</p>
                     </li>

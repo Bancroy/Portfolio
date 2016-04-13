@@ -68,5 +68,5 @@ gulp.task("stylesheets-lint", function () {
 gulp.task("build", ["clean", "copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]);
 
 gulp.task("watch", function () {
-    gulp.watch(["index.php", "content/**", "fonts/**", "images/**", "stylesheets/**"], ["build"]);
+    gulp.watch(["index.php", "content/**", "fonts/**", "images/**", "scripts/**", "stylesheets/**"], ["build"]);
 });
