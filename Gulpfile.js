@@ -84,6 +84,7 @@ gulp.task("watch", function () {
             forms: true,
             scroll: true
         },
+        notify: false,
         proxy: "http://local-jpietras.com/build"
     });
 });

@@ -1,0 +1,90 @@
+nav {
+    display: flex;
+    height: 48px;
+    left: 0;
+    padding: 0 15px;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    z-index: 1000;
+
+    a {
+        border-radius: 5px;
+        color: $white;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: .5px;
+        line-height: 48px;
+        padding: 0 18px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color $hover-transition-time, color $hover-transition-time;
+
+        &:hover {
+            background-color: #eee;
+            color: $black;
+        }
+    }
+
+    li {
+        display: flex;
+    }
+
+    p {
+        @include flow-text(16, 24, "px");
+        align-self: flex-start;
+        color: $white;
+        margin: 0;
+        position: relative;
+        text-transform: uppercase;
+        transition: font-size $hover-transition-time;
+
+        &::after {
+            background-color: $primary;
+            border-radius: 2px;
+            content: "";
+            height: 4px;
+            left: 0;
+            margin-top: 3px;
+            position: absolute;
+            top: 100%;
+            transition: width $hover-transition-time;
+            width: 35px;
+        }
+    }
+
+    ul {
+        align-items: stretch;
+        background-color: #232323;
+        border-radius: 5px;
+        display: flex;
+        list-style: none;
+        margin: 0 0 0 auto;
+        padding: 0;
+        transition: border-radius $hover-transition-time;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    &.sticky {
+        background-color: rgba(35, 35, 35, .7);
+        border-bottom: 2px solid $primary;
+        position: fixed;
+        top: 0;
+
+        p {
+            align-self: center;
+            font-size: 19px;
+
+            &::after {
+                width: 0;
+            }
+        }
+
+        ul {
+            border-radius: 0;
+        }
+    }
+}
