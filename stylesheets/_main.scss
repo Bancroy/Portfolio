@@ -16,12 +16,54 @@
     }
 }
 
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
 html {
     min-width: 320px;
 }
 
-body > main > section {
+.content-section {
     position: relative;
+
+    > header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        h3 {
+            @include flow-text(32, 60, "px");
+            color: $white;
+            font-weight: 400;
+            margin: 0;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        small {
+            @include flow-text(16, 24, "px");
+            display: block;
+        }
+
+        &::before {
+            background-color: $primary;
+            content: "";
+            height: auto;
+            margin-right: 12px;
+            position: relative;
+            top: -5px;
+            width: 8px;
+
+            @include breakpoint("sm", "and-down") {
+                top: -3px;
+                width: 6px;
+            }
+        }
+    }
 
     &.cuts-bottom::after,
     &.cuts-top::before {
