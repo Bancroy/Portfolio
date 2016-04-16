@@ -35,7 +35,7 @@ gulp.task("compress-images", function () {
 });
 
 gulp.task("scripts", ["clean"], function () {
-    return gulp.src(["scripts/libraries/*", "scripts/*"])
+    return gulp.src(["scripts/libraries/*", "scripts/plugins/*", "scripts/*"])
                .pipe(gulpif(util.env.development, sourcemaps.init()))
                 .pipe(concat("script.js"))
                .pipe(gulpif(util.env.development, sourcemaps.write()))
@@ -44,7 +44,7 @@ gulp.task("scripts", ["clean"], function () {
 });
 
 gulp.task("scripts-lint", function () {
-    return gulp.src("scipts/*")
+    return gulp.src("scripts/*")
                .pipe(jshint())
                .pipe(jshint.reporter("default"));
 });

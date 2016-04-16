@@ -1,3 +1,5 @@
+"use strict";
+
 function whichTransitionEvent() {
     var t;
     var el = document.createElement("fakeelement");
@@ -6,7 +8,7 @@ function whichTransitionEvent() {
       OTransition: "oTransitionEnd",
       MozTransition: "transitionend",
       WebkitTransition: "webkitTransitionEnd"
-    }
+    };
 
     for(t in transitions){
         if(el.style[t] !== undefined) {
