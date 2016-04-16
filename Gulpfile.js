@@ -5,6 +5,7 @@ var copy         = require("gulp-copy");
 var cssnano      = require("gulp-cssnano");
 var gulp         = require("gulp");
 var gulpif       = require("gulp-if");
+var gulpsync     = require("gulp-sync")(gulp);
 var imagemin     = require("gulp-imagemin");
 var jshint       = require("gulp-jshint");
 var sass         = require("gulp-sass");
@@ -23,7 +24,7 @@ gulp.task("clean", function () {
                    .pipe(clean());
 });
 
-gulp.task("copy", ["clean"], function () {
+gulp.task("copy", function () {
     return gulp.src(["index.php", "content/**", "fonts/**", "images/**"])
                .pipe(gulpif(util.env.development, copy("build")))
                .pipe(gulpif(util.env.production, copy("dist")))
@@ -36,7 +37,7 @@ gulp.task("compress-images", function () {
                .pipe(gulp.dest("images"));
 });
 
-gulp.task("scripts", ["clean"], function () {
+gulp.task("scripts", function () {
     return gulp.src(["scripts/libraries/*", "scripts/plugins/*", "scripts/*"])
                .pipe(gulpif(util.env.development, sourcemaps.init()))
                 .pipe(concat("script.js"))
@@ -52,7 +53,7 @@ gulp.task("scripts-lint", function () {
                .pipe(jshint.reporter("default"));
 });
 
-gulp.task("stylesheets", ["clean"], function () {
+gulp.task("stylesheets", function () {
     return gulp.src("stylesheets/style.scss")
                .pipe(gulpif(util.env.development, sourcemaps.init()))
                 .pipe(sass().on("error", sass.logError))
@@ -69,12 +70,12 @@ gulp.task("stylesheets-lint", function () {
                .pipe(scsslint({ config: "scss-lint.yml" }));
 });
 
-gulp.task("build", ["clean", "copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]);
+gulp.task("build", gulpsync.sync(["clean", ["copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]]));
 
 gulp.task("watch", function () {
-    gulp.watch("stylesheets/**", ["stylesheets-lint", "stylesheets"]);
     gulp.watch("scripts/**", ["scripts-lint", "scripts"]);
-    gulp.watch(["index.php", "content/**", "fonts/**", "images/**"], ["clean", "copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]);
+    gulp.watch("stylesheets/**", ["stylesheets-lint", "stylesheets"]);
+    gulp.watch(["index.php", "content/**", "fonts/**", "images/**"], ["build"]);
 
     sync.init({
         ghostMode: {
