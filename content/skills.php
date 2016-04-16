@@ -9,9 +9,33 @@
     </header>
     <div class="container">
         <section class="row technologies">
+            <h3 class="outline-only">Technologies</h3>
             <div class="column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-1 lg-5 offset-lg-2 xl-4 offset-xl-3 font-lato list-block" hidden>
-                <h3>Technologies:</h3>
                 <ul class="list">
+                    <li>
+                        <img src="/images/icons/skills-html.png" alt="">
+                        <p>HTML</p>
+                    </li>
+                    <li>
+                        <img src="/images/icons/skills-css.png" alt="">
+                        <p>CSS</p>
+                    </li>
+                    <li>
+                        <img src="/images/icons/skills-javascript.png" alt="">
+                        <p>JavaScript</p>
+                    </li>
+                    <li>
+                        <img src="/images/icons/skills-php.png" alt="">
+                        <p>PHP</p>
+                    </li>
+                    <li>
+                        <img src="/images/icons/skills-mysql.png" alt="">
+                        <p>MySQL</p>
+                    </li>
+                    <li>
+                        <img src="/images/icons/skills-wordpress.png" alt="">
+                        <p>Wordpress</p>
+                    </li>
                     <li>
                         <img src="/images/icons/skills-sass.png" alt="">
                         <p>SASS</p>
@@ -54,6 +78,133 @@
                 <li>
                     <article>
                         <header>
+                            <img src="/images/icons/skills-html.png" alt="">
+                            <div class="wrapper">
+                                <h4>HTML</h4>
+                                <p class="explanation">Markup language</p>
+                            </div>
+                        </header>
+                        <p class="description">
+                            My knowledge of HTML is deep and hardened, because it is the very base of web development.
+                            I always aim to keep outline and semantics properly polished.
+                        </p>
+                        <footer>
+                            <p class="familiarity">Familiarity:</p>
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92" class="skillbar">
+                                <span style="width: 92%;">92%</span>
+                            </div>
+                        </footer>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <img src="/images/icons/skills-css.png" alt="">
+                            <div class="wrapper">
+                                <h4>CSS</h4>
+                                <p class="explanation">Stylesheet language</p>
+                            </div>
+                        </header>
+                        <p class="description">
+                            Without stylesheets there is no future for any website in these times.
+                            I am constantly expanding my knowledge about CSS and it's newest (but only those widely supported) features.
+                        </p>
+                        <footer>
+                            <p class="familiarity">Familiarity:</p>
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="86" class="skillbar">
+                                <span style="width: 86%;">86%</span>
+                            </div>
+                        </footer>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <img src="/images/icons/skills-javascript.png" alt="">
+                            <div class="wrapper">
+                                <h4>JavaScript</h4>
+                                <p class="explanation">Programming language</p>
+                            </div>
+                        </header>
+                        <p class="description">
+                            <abbr title="JavaScript">JS</abbr> is currently one of the fastest growing languages in the world.
+                            I have great knowledge of all the basic features of <abbr title="ECMAScript 5">ES5</abbr> standard.
+                            Now I am moving onto <abbr title="ECMAScript 6">ES6</abbr> standard and learning important frameworks like Angular.
+                        </p>
+                        <footer>
+                            <p class="familiarity">Familiarity:</p>
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="71" class="skillbar">
+                                <span style="width: 71%;">71%</span>
+                            </div>
+                        </footer>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <img src="/images/icons/skills-php.png" alt="">
+                            <div class="wrapper">
+                                <h4>PHP</h4>
+                                <p class="explanation">Hypertext preprocessor</p>
+                            </div>
+                        </header>
+                        <p class="description">
+                            Even when we are moving onto <abbr title="JavaScript">JS</abbr> with back-end (node.js for example), PHP is still widely used language.
+                            If there is need, I am able to write necessary functions or correct something in PHP.
+                        </p>
+                        <footer>
+                            <p class="familiarity">Familiarity:</p>
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="47" class="skillbar">
+                                <span style="width: 47%;">47%</span>
+                            </div>
+                        </footer>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <img src="/images/icons/skills-mysql.png" alt="">
+                            <div class="wrapper">
+                                <h4>MySQL</h4>
+                                <p class="explanation">Database management system</p>
+                            </div>
+                        </header>
+                        <p class="description">
+                            Still one of the most widely used database management systems in the world.
+                            I know how to write simple and avaragely complicated queries if there is need.
+                        </p>
+                        <footer>
+                            <p class="familiarity">Familiarity:</p>
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="56" class="skillbar">
+                                <span style="width: 56%;">56%</span>
+                            </div>
+                        </footer>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <header>
+                            <img src="/images/icons/skills-wordpress.png" alt="">
+                            <div class="wrapper">
+                                <h4>Wordpress</h4>
+                                <p class="explanation">Content manage system</p>
+                            </div>
+                        </header>
+                        <p class="description">
+                            When it comes to bussiness, you have to make something that will allow client to avoid unnecessary costs.
+                            I know how to set up Wordpress websites, edit themes/plugins and then connect everything together.
+                        </p>
+                        <footer>
+                            <p class="familiarity">Familiarity:</p>
+                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62" class="skillbar">
+                                <span style="width: 62%;">62%</span>
+                            </div>
+                        </footer>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <header>
                             <img src="/images/icons/skills-sass.png" alt="">
                             <div class="wrapper">
                                 <h4>SASS</h4>
@@ -68,7 +219,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" class="skillbar">
-                                <span style="width: 95%;"></span>
+                                <span style="width: 95%;">95%</span>
                             </div>
                         </footer>
                     </article>
@@ -90,7 +241,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" class="skillbar">
-                                <span style="width: 70%;"></span>
+                                <span style="width: 70%;">70%</span>
                             </div>
                         </footer>
                     </article>
@@ -112,7 +263,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="84" class="skillbar">
-                                <span style="width: 84%;"></span>
+                                <span style="width: 84%;">84%</span>
                             </div>
                         </footer>
                     </article>
@@ -133,7 +284,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="96" class="skillbar">
-                                <span style="width: 96%;"></span>
+                                <span style="width: 96%;">96%</span>
                             </div>
                         </footer>
                     </article>
@@ -154,7 +305,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82" class="skillbar">
-                                <span style="width: 82%;"></span>
+                                <span style="width: 82%;">82%</span>
                             </div>
                         </footer>
                     </article>
@@ -176,7 +327,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="86" class="skillbar">
-                                <span style="width: 86%;"></span>
+                                <span style="width: 86%;">86%</span>
                             </div>
                         </footer>
                     </article>
@@ -197,7 +348,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="89" class="skillbar">
-                                <span style="width: 89%;"></span>
+                                <span style="width: 89%;">89%</span>
                             </div>
                         </footer>
                     </article>
@@ -218,7 +369,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" class="skillbar">
-                                <span style="width: 60%;"></span>
+                                <span style="width: 60%;">60%</span>
                             </div>
                         </footer>
                     </article>
@@ -240,7 +391,7 @@
                         <footer>
                             <p class="familiarity">Familiarity:</p>
                             <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" class="skillbar">
-                                <span style="width: 81%;"></span>
+                                <span style="width: 81%;">81%</span>
                             </div>
                         </footer>
                     </article>
