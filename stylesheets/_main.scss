@@ -64,26 +64,6 @@ html {
             }
         }
     }
-
-    &.cuts-bottom::after,
-    &.cuts-top::before {
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50' preserveAspectRatio='none'><path fill='" + $cuts-color + "' d='M 0,0 100,0 100,50 L 40,0 0,50 Z' /></svg>");
-        content: "";
-        height: 50px;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-
-    &.cuts-bottom::after {
-        bottom: -1px;
-        transform: rotateZ(180deg);
-    }
-
-    &.cuts-top::before {
-        top: -1px;
-    }
 }
 
 .dim {

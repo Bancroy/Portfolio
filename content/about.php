@@ -30,24 +30,10 @@
                 </article>
                 <article class="column xs-16 md-8">
                     <header>
-                        <img src="/images/icons/about-hobbies.png" alt="">
-                        <h3>Hobbies</h3>
-                    </header>
-                    <p>When i am not smashing my keyboard, I <strong>exercise</strong> or devour piles of pizza. I can actually transform food into code. Professional front-end bias.</p>
-                </article>
-                <article class="column xs-16 md-8">
-                    <header>
                         <img src="/images/icons/about-business.png" alt="">
                         <h3>Business</h3>
                     </header>
                     <p>If you need <strong>stuff done right</strong>, hire me. My services are professional and reliable. Project, budget, deadline - everything is precisely described and fulfilled from top to bottom.</p>
-                </article>
-                <article class="column xs-16 md-8">
-                    <header>
-                        <img src="/images/icons/about-motivation.png" alt="">
-                        <h3>Motivation</h3>
-                    </header>
-                    <p>I spend my days <strong>crafting with passion</strong>. Everthing can become my digital playground, resulting in the most beatuiful and fun sandcastles on this worldwide beach.</p>
                 </article>
             </div>
         </div>

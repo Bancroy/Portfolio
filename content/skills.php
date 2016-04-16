@@ -1,4 +1,4 @@
-<section id="skills" class="content-section cuts-bottom cuts-top">
+<section id="skills" class="content-section">
     <h2 class="outline-only">Skills</h2>
     <div class="dim"></div>
     <header class="font-roboto">
