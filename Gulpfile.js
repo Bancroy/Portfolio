@@ -10,6 +10,7 @@ var jshint       = require("gulp-jshint");
 var sass         = require("gulp-sass");
 var scsslint     = require("gulp-scss-lint");
 var sourcemaps   = require("gulp-sourcemaps");
+var sync         = require("browser-sync").create();
 var uglify       = require("gulp-uglify");
 var util         = require("gulp-util");
 
@@ -25,7 +26,8 @@ gulp.task("clean", function () {
 gulp.task("copy", ["clean"], function () {
     return gulp.src(["index.php", "content/**", "fonts/**", "images/**"])
                .pipe(gulpif(util.env.development, copy("build")))
-               .pipe(gulpif(util.env.production, copy("dist")));
+               .pipe(gulpif(util.env.production, copy("dist")))
+               .pipe(gulpif(util.env.development, sync.reload({ stream: true })));
 });
 
 gulp.task("compress-images", function () {
@@ -40,7 +42,8 @@ gulp.task("scripts", ["clean"], function () {
                 .pipe(concat("script.js"))
                .pipe(gulpif(util.env.development, sourcemaps.write()))
                .pipe(gulpif(util.env.development, gulp.dest("build")))
-               .pipe(gulpif(util.env.production, gulp.dest("dist")));
+               .pipe(gulpif(util.env.production, gulp.dest("dist")))
+               .pipe(gulpif(util.env.development, sync.reload({ stream: true })));
 });
 
 gulp.task("scripts-lint", function () {
@@ -57,7 +60,8 @@ gulp.task("stylesheets", ["clean"], function () {
                 .pipe(gulpif(util.env.production, cssnano()))
                .pipe(gulpif(util.env.development, sourcemaps.write()))
                .pipe(gulpif(util.env.development, gulp.dest("build")))
-               .pipe(gulpif(util.env.production, gulp.dest("dist")));
+               .pipe(gulpif(util.env.production, gulp.dest("dist")))
+               .pipe(gulpif(util.env.development, sync.reload({ stream: true })));
 });
 
 gulp.task("stylesheets-lint", function () {
@@ -68,5 +72,17 @@ gulp.task("stylesheets-lint", function () {
 gulp.task("build", ["clean", "copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]);
 
 gulp.task("watch", function () {
-    gulp.watch(["index.php", "content/**", "fonts/**", "images/**", "scripts/**", "stylesheets/**"], ["build"]);
+    gulp.watch("stylesheets/**", ["stylesheets-lint", "stylesheets"]);
+    gulp.watch("scripts/**", ["scripts-lint", "scripts"]);
+    gulp.watch(["index.php", "content/**", "fonts/**", "images/**"], ["clean", "copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]);
+
+    sync.init({
+        ghostMode: {
+            clicks: true,
+            location: true,
+            forms: true,
+            scroll: true
+        },
+        proxy: "http://local-jpietras.com/build"
+    });
 });
