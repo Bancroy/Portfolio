@@ -15,27 +15,6 @@
         &:last-of-type {
             margin-bottom: 0;
         }
-
-        &::after {
-            background-color: $primary;
-            content: "";
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 8px;
-        }
-
-        &::before {
-            border-color: transparent $primary;
-            border-style: solid;
-            border-width: 7px 12px 7px 0;
-            content: "";
-            position: absolute;
-            right: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
     }
 
     h3 {
@@ -69,9 +48,134 @@
         font-weight: 400;
     }
 
-    .entries {
+    .entries-left,
+    .entries-right {
+        @include breakpoint("lg", "and-up") {
+            display: flex;
+            flex-direction: column;
+        }
+
+        article {
+            @include breakpoint("md", "and-down") {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            @include breakpoint("lg", "and-up") {
+                flex-grow: 1;
+                margin: 15px 0;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+            }
+
+            &::after {
+                background-color: $primary;
+                height: 100%;
+                top: 0;
+                width: 8px;
+
+                @include breakpoint("md", "and-down") {
+                    height: 8px;
+                    width: 80%;
+                }
+            }
+
+            &::before {
+                border-color: transparent $primary;
+                border-style: solid;
+                border-width: 7px 12px 7px 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .entries-right,
+    .person {
         @include breakpoint("md", "and-down") {
             margin-top: 50px;
+        }
+    }
+
+    .entries-left {
+        article {
+            @include breakpoint("md", "and-down") {
+                padding-bottom: 8px;
+
+                &:not(:first-of-type) {
+                    padding-top: 35px;
+                }
+            }
+
+            &::after {
+                right: 0;
+
+                @include breakpoint("md", "and-down") {
+                    bottom: 0;
+                    right: 50%;
+                    top: auto;
+                    transform: translateX(50%);
+                }
+            }
+
+            &::before {
+                left: 100%;
+                margin-top: -1px;
+                transform: rotateZ(180deg);
+
+                @include breakpoint("md", "and-down") {
+                    left: 50%;
+                    top: 100%;
+                    transform: translateX(-50%) rotateZ(-90deg);
+                }
+
+                @include breakpoint("lg", "and-up") {
+                    margin-left: -1px;
+                }
+            }
+        }
+    }
+
+    .entries-right {
+        article {
+            @include breakpoint("md", "and-down") {
+                padding-top: 8px;
+
+                &:not(:last-of-type) {
+                    padding-bottom: 35px;
+                }
+            }
+
+            &::after {
+                left: 0;
+
+                @include breakpoint("md", "and-down") {
+                    bottom: auto;
+                    left: 50%;
+                    top: 0;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &::before {
+                right: 100%;
+
+                @include breakpoint("md", "and-down") {
+                    bottom: 100%;
+                    margin-bottom: -1px;
+                    right: 50%;
+                    top: auto;
+                    transform: translateX(50%) rotateZ(90deg);
+                }
+
+                @include breakpoint("lg", "and-up") {
+                    margin-right: -1px;
+                }
+            }
         }
     }
 
