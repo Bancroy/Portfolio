@@ -2,13 +2,12 @@
     <h2 class="outline-only">Skills</h2>
     <div class="dim"></div>
     <header class="font-roboto">
-        <h3>
+        <p>
             <small>Showtime!</small>
             What I know
-        </h3>
+        </p>
     </header>
-    <div class="container">
-        <section class="row technologies">
+    <section class="container row">
             <h3 class="outline-only">Technologies</h3>
             <div class="column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-1 lg-5 offset-lg-2 xl-4 offset-xl-3 font-lato list-block" hidden>
                 <ul class="list">
@@ -397,6 +396,5 @@
                     </article>
                 </li>
             </ul>
-        </section>
     </div>
 </section>

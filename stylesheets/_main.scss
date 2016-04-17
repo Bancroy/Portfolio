@@ -31,13 +31,13 @@ html {
     > header {
         display: flex;
         justify-content: center;
+        margin-bottom: 60px;
         position: relative;
         width: 100%;
         z-index: 1;
 
-        h3 {
+        p {
             @include flow-text(32, 60, "px");
-            color: $white;
             font-weight: 400;
             margin: 0;
             text-align: left;
@@ -53,7 +53,6 @@ html {
             background-color: $primary;
             border-radius: 4px;
             content: "";
-            height: auto;
             margin-right: 12px;
             position: relative;
             top: -5px;
@@ -63,6 +62,14 @@ html {
                 border-radius: 3px;
                 top: -3px;
                 width: 6px;
+            }
+        }
+    }
+
+    &:nth-of-type(odd) {
+        > header {
+            p {
+                color: $white;
             }
         }
     }

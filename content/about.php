@@ -1,5 +1,11 @@
 <section id="about" class="content-section">
     <h2 class="outline-only">About</h2>
+    <header class="font-roboto">
+        <p>
+            <small><abbr title="from the other side...">Hello!</abbr></small>
+            This is me
+        </p>
+    </header>
     <div class="container">
         <div class="row font-lato">
             <div class="column xs-14 offset-xs-1 sm-10 offset-sm-3 md-8 offset-md-4 lg-5 entries-left">
