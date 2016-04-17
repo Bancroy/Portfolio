@@ -1,7 +1,7 @@
 #home {
     background: url("/images/backgrounds/home.png") no-repeat center center;
     background-size: cover;
-    height: 700px;
+    height: 600px;
 
     a {
         @include link-ghost-button($white, $black);
@@ -40,6 +40,7 @@
         &::before {
             align-self: center;
             background-color: $white;
+            border-radius: 1px;
             content: "";
             display: block;
             flex-grow: 1;

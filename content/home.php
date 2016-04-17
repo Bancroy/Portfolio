@@ -1,4 +1,4 @@
-<section id="home" class="content-section cuts-bottom">
+<section id="home" class="content-section">
     <h2 class="outline-only">Home</h2>
     <div class="dim"></div>
     <div class="wrapper">

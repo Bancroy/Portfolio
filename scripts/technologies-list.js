@@ -1,21 +1,23 @@
-function whichTransitionEvent() {
-    var t;
-    var el = document.createElement("fakeelement");
-    var transitions = {
-      transition: "transitionend",
-      OTransition: "oTransitionEnd",
-      MozTransition: "transitionend",
-      WebkitTransition: "webkitTransitionEnd"
-    }
+"use strict";
 
-    for(t in transitions){
-        if(el.style[t] !== undefined) {
-            return transitions[t];
+$(document).ready(function technologiesList() {
+    // Finds vendor transition event
+    function whichTransitionEvent() {
+        var t;
+        var el = document.createElement("fakeelement");
+        var transitions = {
+          transition: "transitionend",
+          OTransition: "oTransitionEnd",
+          MozTransition: "transitionend",
+          WebkitTransition: "webkitTransitionEnd"
+        };
+
+        for(t in transitions){
+            if(el.style[t] !== undefined) {
+                return transitions[t];
+            }
         }
     }
-}
-
-$(document).ready(function () {
     // Progressive enhancement
     $("#skills .list-block").removeAttr("hidden");
     $("#skills .results").attr("class", "column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-2 lg-5 offset-lg-2 xl-4 offset-xl-2 font-lato results").css("overflow-x", "hidden");

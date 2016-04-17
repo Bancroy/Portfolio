@@ -14,9 +14,7 @@
         <header>
             <section>
                 <h2 class="outline-only">Header</h2>
-                <nav>
-                    <h3 class="outline-only">Navigation</h3>
-                </nav>
+                <?php require_once("/content/nav.php"); ?>
             </section>
         </header>
         <main>
