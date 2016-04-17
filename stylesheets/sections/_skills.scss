@@ -19,7 +19,9 @@
 
         img {
             height: 32px;
+            position: relative;
             width: 32px;
+            z-index: 1;
         }
 
         li {
@@ -28,19 +30,26 @@
             display: flex;
             padding: 10px 20px;
             position: relative;
-            transition: background-color $hover-transition-time, color $hover-transition-time;
+            transition: color $hover-transition-time;
 
             &:not(:last-of-type) {
                 border-bottom: 1px solid #eee;
             }
 
             &:not(.active):hover {
-                background-color: $primary;
                 color: $white;
 
                 &::after {
                     border-right: 2px solid $white;
                     border-top: 2px solid $white;
+                }
+
+                &::before {
+                    height: 82%;
+                    left: 2%;
+                    opacity: 1;
+                    top: 9%;
+                    width: 96%;
                 }
             }
 
@@ -58,6 +67,19 @@
                 width: 12px;
             }
 
+            &::before {
+                background-color: $primary;
+                border-radius: 5px;
+                content: "";
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: height $hover-transition-time, left $hover-transition-time, opacity $hover-transition-time, top $hover-transition-time, width $hover-transition-time;
+                width: 100%;
+            }
+
             &.active {
                 &::after {
                     border-right: 2px solid $primary;
@@ -72,6 +94,8 @@
         p {
             font-size: 16px;
             margin: 0 0 0 10px;
+            position: relative;
+            z-index: 1;
         }
     }
 
