@@ -7,6 +7,7 @@ function blockScroll() {
 $(document).ready(function stickyNav() {
     var nav = $("nav");
     var nav_breakpoint = nav.offset().top + nav.height();
+    var mobile_menu = nav.find(".mobile-menu");
 
     nav.find("a").on("click", function smoothAnchorScroll() {
         var nav_links = $("nav li a");
@@ -28,5 +29,13 @@ $(document).ready(function stickyNav() {
             nav.addClass("sticky");
         else
             nav.removeClass("sticky");
+    });
+
+    mobile_menu.on("click", function toggleMobileMenu() {
+        $(this).toggleClass("active");
+    });
+
+    nav.find("a").on("click", function hideMobileMenu() {
+        mobile_menu.toggleClass("active");
     });
 });

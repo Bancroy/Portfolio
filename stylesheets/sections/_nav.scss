@@ -8,6 +8,10 @@ nav {
     width: 100%;
     z-index: 1000;
 
+    @include breakpoint("md", "and-down") {
+        height: auto;
+    }
+
     a {
         background-color: #ddd;
         border-radius: 5px;
@@ -21,6 +25,11 @@ nav {
         text-transform: uppercase;
         transition: background-color $hover-transition-time, color $hover-transition-time;
 
+        @include breakpoint("md", "and-down") {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
         &.active,
         &:hover {
             background-color: $primary;
@@ -33,6 +42,11 @@ nav {
 
         &:not(:last-of-type) {
             margin-right: 12px;
+
+            @include breakpoint("md", "and-down") {
+                margin-bottom: 6px;
+                margin-right: 0;
+            }
         }
     }
 
@@ -45,6 +59,10 @@ nav {
         text-transform: uppercase;
         top: 0;
         transition: all $hover-transition-time;
+
+        @include breakpoint("xs", "only") {
+            display: none;
+        }
 
         &::after {
             background-color: $primary;
@@ -65,7 +83,107 @@ nav {
         display: flex;
         list-style: none;
         margin: 0 0 0 auto;
+        order: 1;
         padding: 0;
+        transition: opacity $hover-transition-time, visibility $hover-transition-time;
+
+        @include breakpoint("md", "and-down") {
+            flex-direction: column;
+        }
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .mobile-menu {
+        background-color: #ddd;
+        border: 0;
+        border-radius: 5px;
+        height: 48px;
+        margin-left: 6px;
+        order: 2;
+        outline: none;
+        position: relative;
+        transition: border-radius .5s;
+        user-select: none;
+        width: 48px;
+
+        @include breakpoint("lg", "and-up") {
+            display: none;
+        }
+
+        @include breakpoint("md", "and-down") {
+            + ul {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        span {
+            background-color: $black;
+            height: 3px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px;
+
+            &::after,
+            &::before {
+                background-color: $black;
+                content: "";
+                height: 3px;
+                left: 0;
+                position: absolute;
+                transition: bottom $hover-transition-time / 2, top $hover-transition-time / 2, transform $hover-transition-time;
+                width: 28px;
+            }
+
+            &::after {
+                bottom: -8px;
+            }
+
+            &::before {
+                top: -8px;
+            }
+        }
+
+        &.active {
+            span {
+                width: 0;
+
+                &::after,
+                &::before {
+                    left: -15px;
+                }
+
+                &::after {
+                    bottom: 0;
+                    transform: rotateZ(-45deg);
+                }
+
+                &::before {
+                    top: 0;
+                    transform: rotateZ(45deg);
+                }
+            }
+
+            + ul {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &:not(.active):hover span {
+            &::after {
+                bottom: -10px;
+            }
+
+            &::before {
+                top: -10px;
+            }
+        }
     }
 
     &.sticky {
@@ -77,6 +195,11 @@ nav {
             padding: 5px 10px;
             top: 50%;
             transform: translateY(-50%);
+
+            @include breakpoint("md", "and-down") {
+                top: 0;
+                transform: none;
+            }
 
             &::after {
                 width: 0;
