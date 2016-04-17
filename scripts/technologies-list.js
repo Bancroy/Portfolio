@@ -1,6 +1,7 @@
 "use strict";
 
 $(document).ready(function technologiesList() {
+    // Finds vendor transition event
     function whichTransitionEvent() {
         var t;
         var el = document.createElement("fakeelement");
