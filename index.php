@@ -1,3 +1,4 @@
+<?php define('ROOT', $_SERVER['DOCUMENT_ROOT']); ?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -14,18 +15,18 @@
         <header>
             <section>
                 <h2 class="outline-only">Header</h2>
-                <?php require_once("/content/nav.php"); ?>
+                <?php require_once(ROOT.'/content/nav.php'); ?>
             </section>
         </header>
         <main>
             <section>
                 <h2 class="outline-only">Content</h2>
-                <?php require_once("/content/home.php"); ?>
-                <?php require_once("/content/about.php"); ?>
-                <?php require_once("/content/skills.php"); ?>
+                <?php require_once(ROOT.'/content/home.php'); ?>
+                <?php require_once(ROOT.'/content/about.php'); ?>
+                <?php require_once(ROOT.'/content/skills.php'); ?>
             </section>
         </main>
-        <?php require_once("/content/footer.php"); ?>
+        <?php require_once(ROOT.'/content/footer.php'); ?>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
