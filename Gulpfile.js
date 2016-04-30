@@ -71,8 +71,7 @@ gulp.task("stylesheets-lint", function () {
 });
 
 gulp.task("build", gulpsync.sync(["clean", ["copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]]));
-gulp.task("watch-files", ["copy"], sync.reload);
-gulp.task("watch", ["copy"], function () {
+gulp.task("watch", function () {
     sync.init({
         ghostMode: {
             clicks: true,
@@ -86,5 +85,5 @@ gulp.task("watch", ["copy"], function () {
 
     gulp.watch("scripts/**", ["scripts-lint", "scripts"]);
     gulp.watch("stylesheets/**", ["stylesheets-lint", "stylesheets"]);
-    gulp.watch(["index.php", "content/**", "fonts/**", "images/**", "server/**"], ["watch-files"]);
+    gulp.watch(["index.php", "content/**", "fonts/**", "images/**", "server/**"], ["copy"]);
 });
