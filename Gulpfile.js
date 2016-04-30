@@ -25,7 +25,7 @@ gulp.task("clean", function () {
 });
 
 gulp.task("copy", function () {
-    return gulp.src(["index.php", "content/**", "fonts/**", "images/**"])
+    return gulp.src(["index.php", "content/**", "fonts/**", "images/**", "server/**"])
                .pipe(gulpif(util.env.development, copy("build")))
                .pipe(gulpif(util.env.production, copy("dist")))
                .pipe(gulpif(util.env.development, sync.reload({ stream: true })));
@@ -62,7 +62,7 @@ gulp.task("stylesheets", function () {
                .pipe(gulpif(util.env.development, sourcemaps.write()))
                .pipe(gulpif(util.env.development, gulp.dest("build")))
                .pipe(gulpif(util.env.production, gulp.dest("dist")))
-               .pipe(gulpif(util.env.development, sync.reload({ stream: true })));
+               .pipe(gulpif(util.env.development, sync.stream()));
 });
 
 gulp.task("stylesheets-lint", function () {
@@ -71,12 +71,8 @@ gulp.task("stylesheets-lint", function () {
 });
 
 gulp.task("build", gulpsync.sync(["clean", ["copy", "stylesheets-lint", "stylesheets", "scripts-lint", "scripts"]]));
-
-gulp.task("watch", function () {
-    gulp.watch("scripts/**", ["scripts-lint", "scripts"]);
-    gulp.watch("stylesheets/**", ["stylesheets-lint", "stylesheets"]);
-    gulp.watch(["index.php", "content/**", "fonts/**", "images/**"], ["build"]);
-
+gulp.task("watch-files", ["copy"], sync.reload);
+gulp.task("watch", ["copy"], function () {
     sync.init({
         ghostMode: {
             clicks: true,
@@ -87,4 +83,8 @@ gulp.task("watch", function () {
         notify: false,
         proxy: "http://jpietras.local"
     });
+
+    gulp.watch("scripts/**", ["scripts-lint", "scripts"]);
+    gulp.watch("stylesheets/**", ["stylesheets-lint", "stylesheets"]);
+    gulp.watch(["index.php", "content/**", "fonts/**", "images/**", "server/**"], ["watch-files"]);
 });

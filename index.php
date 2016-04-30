@@ -1,4 +1,9 @@
-<?php define('ROOT', $_SERVER['DOCUMENT_ROOT']); ?>
+<?php
+    if(strpos($_SERVER['HTTP_HOST'], 'local'))
+        require_once($_SERVER['DOCUMENT_ROOT'].'server/config-local.php');
+    else
+        require_once($_SERVER['DOCUMENT_ROOT'].'server/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -8,7 +13,7 @@
         <meta name="description" content="James Pietras is a freelance, professional front-end web developer. Providing quality user experience through responsive design and performant front-end developement.">
         <meta name="keywords" content="front-end developer, front-end developement, web developer, portfolio, james pietras">
         <title>Portfolio | James Pietras - Front-End Web Developer</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1 class="outline-only">Portfolio | James Pietras - Front-End Web Developer</h1>
