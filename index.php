@@ -26,9 +26,11 @@
         <main>
             <section>
                 <h2 class="outline-only">Content</h2>
-                <?php require_once(ROOT.'/content/home.php'); ?>
-                <?php require_once(ROOT.'/content/about.php'); ?>
-                <?php require_once(ROOT.'/content/skills.php'); ?>
+                <?php
+                    $content_sections = ["home", "about", "skills", "experience"];
+                    foreach($content_sections as $section)
+                        require_once(ROOT.'/content/'.$section.'.php');
+                ?>
             </section>
         </main>
         <?php require_once(ROOT.'/content/footer.php'); ?>
