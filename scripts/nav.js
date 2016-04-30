@@ -8,7 +8,7 @@ $(document).ready(function stickyNav() {
 
     // Get navigation components and save initial offset with height
     var nav = $("nav");
-    var nav_breakpoint = nav.offset().top + nav.height();
+    var nav_breakpoint = nav.height() + parseInt(nav.css("top"));
     var nav_links = nav.find("a");
     var mobile_menu = nav.find(".mobile-menu");
 
@@ -37,7 +37,7 @@ $(document).ready(function stickyNav() {
             nav.addClass("sticky");
         else
             nav.removeClass("sticky");
-    });
+    }).trigger("scroll");
 
     // Show menu when clicking mobile button
     mobile_menu.on("click", function toggleMobileMenu() {

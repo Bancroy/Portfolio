@@ -23,7 +23,7 @@ nav {
         padding: 0 18px;
         text-decoration: none;
         text-transform: uppercase;
-        transition: background-color $hover-transition-time, color $hover-transition-time;
+        transition: background-color $transition-time, color $transition-time;
 
         @include breakpoint("md", "and-down") {
             flex-basis: 100%;
@@ -58,7 +58,7 @@ nav {
         position: absolute;
         text-transform: uppercase;
         top: 0;
-        transition: all $hover-transition-time;
+        transition: all $transition-time;
 
         @include breakpoint("xs", "only") {
             display: none;
@@ -73,7 +73,7 @@ nav {
             margin-top: 3px;
             position: absolute;
             top: 100%;
-            transition: width $hover-transition-time;
+            transition: width $transition-time;
             width: 35px;
         }
     }
@@ -85,7 +85,7 @@ nav {
         margin: 0 0 0 auto;
         order: 1;
         padding: 0;
-        transition: opacity $hover-transition-time, visibility $hover-transition-time;
+        transition: opacity $transition-time, visibility $transition-time;
 
         @include breakpoint("md", "and-down") {
             flex-direction: column;
@@ -103,7 +103,7 @@ nav {
         height: 48px;
         margin-left: 6px;
         order: 2;
-        outline: none;
+        outline: 0;
         position: relative;
         transition: border-radius .5s;
         user-select: none;
@@ -136,7 +136,7 @@ nav {
                 height: 3px;
                 left: 0;
                 position: absolute;
-                transition: bottom $hover-transition-time / 2, top $hover-transition-time / 2, transform $hover-transition-time;
+                transition: bottom $transition-time / 2, top $transition-time / 2, transform $transition-time;
                 width: 28px;
             }
 
@@ -191,7 +191,6 @@ nav {
             background-color: #ddd;
             border-radius: 5px;
             color: $black;
-            font-size: 19px;
             padding: 5px 10px;
             top: 50%;
             transform: translateY(-50%);
