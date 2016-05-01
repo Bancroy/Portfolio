@@ -5,15 +5,20 @@
     display: inline-block;
     font-size: 16px;
     letter-spacing: 4px;
+    line-height: 100%;
     padding: 15px 25px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color $hover-transition-time, color $hover-transition-time;
+    transition: background-color $transition-time, color $transition-time;
 
     &:hover {
         background-color: $color-base;
         color: $color-switch;
     }
+}
+
+a {
+    outline: 0;
 }
 
 abbr[title] {
@@ -24,9 +29,11 @@ abbr[title] {
 
 html {
     min-width: 320px;
+    overflow-x: hidden;
 }
 
 .content-section {
+    padding: 90px 0;
     position: relative;
 
     > header {
