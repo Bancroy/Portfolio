@@ -1,4 +1,4 @@
-<section id="home" class="content-section">
+<section id="home" class="content-section parallax">
     <h2 class="outline-only">Home</h2>
     <div class="dim"></div>
     <div class="wrapper">

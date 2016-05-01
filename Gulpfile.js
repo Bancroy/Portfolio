@@ -38,7 +38,7 @@ gulp.task("compress-images", function () {
 });
 
 gulp.task("scripts", function () {
-    return gulp.src(["scripts/libraries/*", "scripts/plugins/*", "scripts/*"])
+    return gulp.src(["scripts/libraries/*", "scripts/*"])
                .pipe(gulpif(util.env.development, sourcemaps.init()))
                 .pipe(concat("script.js"))
                .pipe(gulpif(util.env.development, sourcemaps.write()))

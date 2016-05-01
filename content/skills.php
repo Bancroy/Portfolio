@@ -1,4 +1,4 @@
-<section id="skills" class="content-section">
+<section id="skills" class="content-section parallax">
     <h2 class="outline-only">Skills</h2>
     <div class="dim"></div>
     <header class="font-roboto">
