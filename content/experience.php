@@ -15,7 +15,7 @@
                     <img src="/images/icons/experience-work.png" alt="">
                     <article>
                         <p class="position">Wordpress Developer</p>
-                        <h4 class="company"><a href="http://ai7.pl/">AI7</a></h4>
+                        <h4 class="company"><a href="http://ai7.pl/" target="_blank">AI7</a></h4>
                         <div class="period">April 2016 - Present</div>
                         <p class="description">
                             Long term cooperation as a subcontractor.
@@ -28,7 +28,7 @@
                     <img src="/images/icons/experience-work.png" alt="">
                     <article>
                         <p class="position">Front-End Web Developer</p>
-                        <h4 class="company"><a href="https://go4sport.pl/">Go4sport</a></h4>
+                        <h4 class="company"><a href="https://go4sport.pl/" target="_blank">Go4sport</a></h4>
                         <div class="period">March 2016 - Present</div>
                         <p class="description">
                             Hired as the only front-end developer in the team.
@@ -41,7 +41,7 @@
                     <img src="/images/icons/experience-intern.png" alt="">
                     <article>
                         <p class="position">Junior Web Developer</p>
-                        <h4 class="company"><a href="http://ivision.pl/">Ivision.pl</a></h4>
+                        <h4 class="company"><a href="http://ivision.pl/" target="_blank">Ivision.pl</a></h4>
                         <div class="period">July 2015</div>
                         <p class="description">
                             Short term intern where I was required to work with both front-end and back-end.

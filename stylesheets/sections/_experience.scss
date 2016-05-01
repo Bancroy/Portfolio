@@ -13,7 +13,6 @@
             background-color: #ecf0f1;
             border-radius: 5px;
             padding: 20px 25px;
-            transition: left $transition-time * 1.5, opacity $transition-time * 1.5;
 
             &::after {
                 border-color: transparent transparent transparent #ecf0f1;
@@ -192,6 +191,31 @@
 
             &:last-of-type {
                 padding-top: 20px;
+            }
+        }
+
+        &.progressive-enhancement {
+            li {
+                article {
+                    position: relative;
+                    transition: left $transition-time * 2;
+                }
+
+                &:nth-of-type(even) {
+                    article {
+                        left: 300%;
+                    }
+                }
+
+                &:nth-of-type(odd) {
+                    article {
+                        left: -200%;
+
+                        @include breakpoint("sm", "and-down") {
+                            left: 300%;
+                        }
+                    }
+                }
             }
         }
     }
