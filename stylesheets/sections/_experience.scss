@@ -1,3 +1,191 @@
 #experience {
-    
+    .timeline {
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+
+        article {
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 20px 25px;
+        }
+
+        img {
+            height: 24px;
+            left: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            z-index: 2;
+
+            @include breakpoint("sm", "and-down") {
+                left: -55px;
+            }
+        }
+
+        li {
+            position: relative;
+            width: 50%;
+
+            @include breakpoint("sm", "and-down") {
+                width: 100%;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 30px;
+            }
+
+            &:nth-of-type(odd) {
+                padding-right: 8%;
+
+                @include breakpoint("sm", "and-down") {
+                    padding: 0;
+                }
+            }
+
+            &:nth-of-type(even) {
+                margin-left: 50%;
+                padding-left: 8%;
+
+                @include breakpoint("sm", "and-down") {
+                    margin-left: 0;
+                    padding: 0;
+                }
+
+                img {
+                    left: 0;
+
+                    @include breakpoint("sm", "and-down") {
+                        left: -55px;
+                    }
+                }
+
+                &::after {
+                    left: auto;
+                    right: 84%;
+                    transform: rotateZ(180deg) translateY(50%);
+
+                    @include breakpoint("sm", "and-down") {
+                        right: 100%;
+                    }
+                }
+
+                &::before {
+                    left: 0;
+
+                    @include breakpoint("sm", "and-down") {
+                        left: -55px;
+                    }
+                }
+            }
+
+            &::after {
+                border-color: transparent transparent transparent #ecf0f1;
+                border-style: solid;
+                border-width: 10.5px 0 10.5px 18px;
+                content: "";
+                left: 84%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include breakpoint("sm", "and-down") {
+                    left: auto;
+                    right: 100%;
+                    transform: rotateZ(180deg) translateY(50%);
+                }
+            }
+
+            &::before {
+                background-color: $white;
+                border: 4px solid $black;
+                border-radius: 50%;
+                content: "";
+                height: 50px;
+                left: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                z-index: 1;
+
+                @include breakpoint("sm", "and-down") {
+                    left: -55px;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 15px 0;
+            position: relative;
+
+            @include breakpoint("sm", "and-down") {
+                padding-left: 75px;
+            }
+
+            &::after {
+                background-color: $black;
+                border-radius: 2px;
+                content: "";
+                height: 100%;
+                left: 50%;
+                position: absolute;
+                top: 0;
+                transform: translateX(-50%);
+                width: 4px;
+
+                @include breakpoint("sm", "and-down") {
+                    left: 18px;
+                    transform: none;
+                }
+            }
+        }
+
+        .company {
+            font-size: 21px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: 300;
+            margin: 15px 0 0;
+        }
+
+        .period {
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .position {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 15px;
+        }
+
+        .year {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+
+            @include breakpoint("sm", "and-down") {
+                text-align: left;
+            }
+
+            &:first-of-type {
+                padding-bottom: 20px;
+            }
+
+            &:last-of-type {
+                padding-top: 20px;
+            }
+        }
+    }
 }

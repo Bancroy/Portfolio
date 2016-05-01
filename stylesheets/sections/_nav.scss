@@ -53,6 +53,7 @@ nav {
 
     p {
         @include flow-text(16, 24, "px");
+        border-radius: 5px;
         color: $white;
         left: 0;
         margin: 0;
@@ -192,7 +193,6 @@ nav {
     &.sticky {
         p {
             background-color: #ddd;
-            border-radius: 5px;
             color: $black;
             padding: 5px 10px;
             top: 50%;
