@@ -33,13 +33,17 @@ html {
 }
 
 .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     padding: 90px 0;
     position: relative;
 
     > header {
         display: flex;
         justify-content: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         position: relative;
         width: 100%;
         z-index: 1;

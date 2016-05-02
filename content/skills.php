@@ -186,7 +186,7 @@
                         <img src="/images/icons/skills-wordpress.png" alt="">
                         <div class="wrapper">
                             <h4>Wordpress</h4>
-                            <p class="explanation">Content manage system</p>
+                            <p class="explanation">Content management system</p>
                         </div>
                     </header>
                     <p class="description">
@@ -195,8 +195,8 @@
                     </p>
                     <footer>
                         <p class="familiarity">Familiarity:</p>
-                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62" class="skillbar">
-                            <span style="width: 62%;">62%</span>
+                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="71" class="skillbar">
+                            <span style="width: 71%;">71%</span>
                         </div>
                     </footer>
                 </article>

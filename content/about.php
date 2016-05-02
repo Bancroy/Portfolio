@@ -29,14 +29,14 @@
                 <a class="font-lato" href="/images/other/about-resume.png" target="_blank" type="image/png">Resume</a>
             </div>
             <div class="column xs-14 offset-xs-1 sm-10 offset-sm-3 md-8 offset-md-4 lg-5 offset-lg-1 offset-xl-1 entries-right">
-                <article class="column xs-16 md-8">
+                <article>
                     <header>
                         <img src="/images/icons/about-code.png" alt="">
                         <h3>Code</h3>
                     </header>
                     <p>My highest priority is <strong>quality</strong>. Keeping code standarized, clean, short and functional is one of habits I stubbronly struggle to maintain. This is very important for front-end developer.</p>
                 </article>
-                <article class="column xs-16 md-8">
+                <article>
                     <header>
                         <img src="/images/icons/about-business.png" alt="">
                         <h3>Business</h3>

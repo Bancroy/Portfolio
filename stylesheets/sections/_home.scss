@@ -1,6 +1,5 @@
 #home {
     background-image: url("/images/backgrounds/home.png");
-    height: 100vh;
 
     a {
         @include link-ghost-button($white, $black);
