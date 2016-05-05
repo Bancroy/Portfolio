@@ -1,8 +1,8 @@
 <?php
     if(strpos($_SERVER['HTTP_HOST'], 'local'))
-        require_once($_SERVER['DOCUMENT_ROOT'].'server/config-local.php');
+        require_once($_SERVER['DOCUMENT_ROOT'].'/server/config-local.php');
     else
-        require_once($_SERVER['DOCUMENT_ROOT'].'server/config.php');
+        require_once($_SERVER['DOCUMENT_ROOT'].'/server/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
