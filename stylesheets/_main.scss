@@ -37,8 +37,10 @@ html {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    overflow: hidden;
     padding: 90px 0;
     position: relative;
+    width: 100vw;
 
     > header {
         display: flex;
