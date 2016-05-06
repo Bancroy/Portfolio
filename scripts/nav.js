@@ -10,7 +10,10 @@ $(document).ready(function stickyNav() {
     var nav_links = nav.find("a");
     var mobile_menu = nav.find(".mobile-menu");
 
-    nav_links.on("click", function smoothAnchorScroll() {
+    nav_links.on("click touch", function smoothAnchorScroll(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
         $(document).on("mousewheel DOMMouseScroll", blockScroll);
         nav_links.css("pointer-events", "none");
 
@@ -31,11 +34,17 @@ $(document).ready(function stickyNav() {
             nav.removeClass("sticky");
     }).trigger("scroll");
 
-    mobile_menu.on("click", function toggleMobileMenu() {
+    mobile_menu.on("click touch", function toggleMobileMenu(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
         $(this).toggleClass("active");
     });
 
-    nav.find("a").on("click", function hideMobileMenu() {
+    nav.find("a").on("click touch", function hideMobileMenu(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
         mobile_menu.toggleClass("active");
     });
 });
