@@ -110,6 +110,7 @@
         .dim {
             background-color: rgba(0, 0, 0, .85);
             border-radius: 4px;
+            opacity: 0;
             z-index: 2;
 
             @include breakpoint("sm", "and-down") {
