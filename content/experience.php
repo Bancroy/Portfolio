@@ -52,6 +52,6 @@
                 </li>
             </ul>
             <time class="year">2015</time>
-        </div>
+        </section>
     </div>
 </section>
