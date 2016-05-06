@@ -27,7 +27,7 @@
             <section>
                 <h2 class="outline-only">Content</h2>
                 <?php
-                    $content_sections = ["home", "about", "skills", "experience"];
+                    $content_sections = ['home', 'about', 'skills', 'experience', 'portfolio'];
                     foreach($content_sections as $section)
                         require_once(ROOT.'/content/'.$section.'.php');
                 ?>
