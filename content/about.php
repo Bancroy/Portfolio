@@ -2,7 +2,7 @@
     <h2 class="outline-only">About</h2>
     <header class="font-roboto">
         <p>
-            <small><abbr title="from the other side...">Hello!</abbr></small>
+            <small><abbr title="from the other side...">Hello</abbr></small>
             This is me
         </p>
     </header>

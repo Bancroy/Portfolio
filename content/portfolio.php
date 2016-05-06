@@ -3,7 +3,7 @@
     <div class="dim"></div>
     <header class="font-roboto">
         <p>
-            <small>Scars of war</small>
+            <small>Quality showcase</small>
             Portfolio
         </p>
     </header>

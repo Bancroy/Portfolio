@@ -42,4 +42,28 @@ $(document).ready(function technologiesList() {
 
     $("#skills .list-block li").eq(0).addClass("active");
     $("#skills .results li").eq(0).show().css("opacity", "1").addClass("active");
+
+    var unblock = 0;
+    $("#skills .list-block .dim").on("mousedown", function startUnblocking() {
+        $(this).find(".info").hide();
+        $(this).find(".progressbar").css("visibility", "visible");
+        $(this).find(".fill").css({
+            transition: "width 2s",
+            width: "100%"
+        });
+
+        var blocker = $(this);
+        unblock = setTimeout(function unblockCountdown() {
+            blocker.remove();
+        }, 2000);
+    }).on("mouseup mouseleave", function stopUnblocking() {
+        $(this).find(".info").show();
+        $(this).find(".progressbar").css("visibility", "hidden");
+        $(this).find(".fill").css({
+            transition: "none",
+            width: "0"
+        });
+
+        clearTimeout(unblock);
+    });
 });

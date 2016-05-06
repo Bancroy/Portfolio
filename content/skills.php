@@ -3,13 +3,19 @@
     <div class="dim"></div>
     <header class="font-roboto">
         <p>
-            <small>Showtime!</small>
+            <small>Showtime</small>
             What I know
         </p>
     </header>
     <section class="container row">
         <h3 class="outline-only">Technologies</h3>
         <div class="column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-1 lg-5 offset-lg-2 xl-4 offset-xl-3 font-lato list-block" hidden>
+            <div class="dim">
+                <div class="info">Click and hold to activate...</div>
+                <div class="progressbar">
+                    <div class="fill"></div>
+                </div>
+            </div>
             <ul class="list">
                 <li>
                     <img src="/images/icons/skills-html.png" alt="">
