@@ -66,7 +66,7 @@ gulp.task("stylesheets", function () {
 });
 
 gulp.task("stylesheets-lint", function () {
-    return gulp.src("stylesheets/**")
+    return gulp.src(["stylesheets/*", "stylesheets/resources/*", "stylesheets/sections/*"])
                .pipe(scsslint({ config: "scss-lint.yml" }));
 });
 

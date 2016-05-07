@@ -1,18 +1,19 @@
 #skills {
-    background: url("/images/backgrounds/skills.png") no-repeat center center;
-    background-size: cover;
+    background-image: url("/images/backgrounds/skills.png");
 
     .list-block,
     .results {
         background-color: $white;
         border-radius: 5px;
         padding: 0;
+        position: relative;
     }
 
     .list {
-        height: 317px;
+        height: 370px;
         list-style: none;
         margin: 0;
+        max-height: 40vh;
         overflow-y: auto;
         padding: 0;
 
@@ -95,6 +96,62 @@
             margin: 0 0 0 10px;
             position: relative;
             z-index: 1;
+        }
+    }
+
+    .list-block {
+        user-select: none;
+
+        @include breakpoint("sm", "and-down") {
+            cursor: pointer;
+            pointer-events: cursor;
+        }
+
+        .dim {
+            background-color: rgba(0, 0, 0, .85);
+            border-radius: 4px;
+            display: none;
+            opacity: 0;
+            z-index: 2;
+
+            @include breakpoint("sm", "and-down") {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        .fill {
+            background-color: $primary;
+            border-radius: 5px;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 0;
+        }
+
+        .info {
+            color: $white;
+            content: "Click and hold to activate...";
+            font-size: 24px;
+            left: 50%;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+        }
+
+        .progressbar {
+            background-color: $white;
+            border-radius: 4px;
+            height: 8px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+            width: 70%;
         }
     }
 

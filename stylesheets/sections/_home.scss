@@ -1,7 +1,5 @@
 #home {
-    background: url("/images/backgrounds/home.png") no-repeat center center;
-    background-size: cover;
-    height: 600px;
+    background-image: url("/images/backgrounds/home.png");
 
     a {
         @include link-ghost-button($white, $black);

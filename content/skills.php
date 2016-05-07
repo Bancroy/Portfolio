@@ -1,15 +1,21 @@
-<section id="skills" class="content-section">
+<section id="skills" class="content-section parallax">
     <h2 class="outline-only">Skills</h2>
     <div class="dim"></div>
     <header class="font-roboto">
         <p>
-            <small>Showtime!</small>
+            <small>Showtime</small>
             What I know
         </p>
     </header>
     <section class="container row">
         <h3 class="outline-only">Technologies</h3>
         <div class="column xs-14 offset-xs-1 sm-8 offset-sm-4 md-6 offset-md-1 lg-5 offset-lg-2 xl-4 offset-xl-3 font-lato list-block" hidden>
+            <div class="dim">
+                <div class="info">Click and hold to activate...</div>
+                <div class="progressbar">
+                    <div class="fill"></div>
+                </div>
+            </div>
             <ul class="list">
                 <li>
                     <img src="/images/icons/skills-html.png" alt="">
@@ -186,7 +192,7 @@
                         <img src="/images/icons/skills-wordpress.png" alt="">
                         <div class="wrapper">
                             <h4>Wordpress</h4>
-                            <p class="explanation">Content manage system</p>
+                            <p class="explanation">Content management system</p>
                         </div>
                     </header>
                     <p class="description">
@@ -195,8 +201,8 @@
                     </p>
                     <footer>
                         <p class="familiarity">Familiarity:</p>
-                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62" class="skillbar">
-                            <span style="width: 62%;">62%</span>
+                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="71" class="skillbar">
+                            <span style="width: 71%;">71%</span>
                         </div>
                     </footer>
                 </article>

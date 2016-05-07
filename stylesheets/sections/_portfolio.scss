@@ -1,0 +1,132 @@
+#portfolio {
+    background-image: url("/images/backgrounds/portfolio.png");
+
+    iframe {
+        height: calc(100% - 50px);
+        width: 100%;
+    }
+
+    .chosen-container,
+    .omnibox-fallback {
+        background-color: $white;
+        border-radius: 8px;
+        color: #747474;
+        height: 75%;
+        margin: 0 17px;
+        min-width: 0;
+        outline: none;
+        width: 100%;
+
+        option {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .addressbar {
+        align-items: center;
+        background-image: url("/images/other/portfolio-addressbar.png");
+        background-repeat: repeat-x;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: flex;
+        height: 50px;
+        position: relative;
+    }
+
+    .browser {
+        background-color: $white;
+        border: 1px solid rgba(0, 0, 0, .8);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        min-height: 70vh;
+        padding-bottom: 56.25%;
+        position: relative;
+        width: 100%;
+    }
+
+    .chosen-drop {
+        border: 1px solid #b0b0b0;
+        border-top: 0;
+        font-size: 16px;
+        margin-top: -5px;
+    }
+
+    .chosen-single {
+        align-items: center;
+        background: none;
+        border: 1px solid #b0b0b0;
+        box-shadow: none;
+        display: flex;
+        font-size: 16px;
+        height: 100%;
+        padding: 0;
+    }
+
+    .content {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .dot {
+        height: auto;
+        margin-left: 12px;
+        width: 16px;
+
+        &:first-of-type {
+            margin-left: 17px;
+        }
+    }
+
+    .omnibox-fallback {
+        align-items: center;
+        display: flex;
+        list-style: none;
+        overflow-x: auto;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin-left: 12px;
+
+            &:last-of-type {
+                padding-right: 12px;
+            }
+        }
+    }
+
+    .plus {
+        margin-left: 17px;
+        margin-right: 12px;
+
+        @include breakpoint("xs", "only") {
+            margin-left: 8px;
+            margin-right: 4px;
+        }
+    }
+
+    .separator {
+        margin-right: 12px;
+
+        @include breakpoint("xs", "only") {
+            margin-right: 6px;
+        }
+    }
+
+    .reload {
+        cursor: pointer;
+        position: absolute;
+        right: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include breakpoint("xs", "only") {
+            right: 26px;
+        }
+    }
+}

@@ -3,7 +3,9 @@
 @import "resources/typography";
 @import "resources/normalize";
 @import "resources/scrollbars";
-@import "resources/sass-toolbox";
+
+@import "libraries/sass-toolbox";
+@import "libraries/jquery-chosen";
 
 @import "setup";
 @import "main";
@@ -13,4 +15,5 @@
 @import "sections/about";
 @import "sections/skills";
 @import "sections/experience";
+@import "sections/portfolio";
 @import "sections/footer";
